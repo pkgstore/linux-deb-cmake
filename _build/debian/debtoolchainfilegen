@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # Copyright 2018 Helmut Grohne <helmut@subdivi.de>
@@ -29,21 +29,20 @@
 #
 #  ./debtoolchainfilegen armhf > cmake_toolchain_armhf.cmake
 
-if [ -z "$1" ]
-then
+if [[ -z "${1}" ]]; then
   echo "Usage: debtoolchainfilegen (arch) > cmake_toolchain_<arch>.cmake"
   exit 1
 fi
 
-ARCH=$1
+ARCH=${1}
 
-DEB_HOST_GNU_TYPE=$(dpkg-architecture -f "-a$1" -qDEB_HOST_GNU_TYPE)
-DEB_HOST_GNU_CPU=$(dpkg-architecture -f "-a$1" -qDEB_HOST_GNU_CPU)
-case "$(dpkg-architecture -f "-a$1" -qDEB_HOST_ARCH_OS)" in
-        linux) system_name=Linux; ;;
-        kfreebsd) system_name=kFreeBSD; ;;
-        hurd) system_name=GNU; ;;
-        *) exit 1; ;;
+DEB_HOST_GNU_TYPE=$(dpkg-architecture -f "-a${1}" -qDEB_HOST_GNU_TYPE)
+DEB_HOST_GNU_CPU=$(dpkg-architecture -f "-a${1}" -qDEB_HOST_GNU_CPU)
+case "$(dpkg-architecture -f "-a${1}" -qDEB_HOST_ARCH_OS)" in
+  linux) system_name=Linux; ;;
+  kfreebsd) system_name=kFreeBSD; ;;
+  hurd) system_name=GNU; ;;
+  *) exit 1; ;;
 esac
 
 cat <<EOF

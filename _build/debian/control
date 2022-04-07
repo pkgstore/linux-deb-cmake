@@ -1,10 +1,8 @@
 Source: cmake
 Section: devel
 Priority: optional
-Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
-Uploaders: Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
-           Felix Geyer <fgeyer@debian.org>,
-           Timo Röhling <roehling@debian.org>
+Maintainer: Package Store <pkgstore@mail.ru>
+Uploaders: Package Store <pkgstore@mail.ru>
 Build-Depends: debhelper-compat (= 13),
                cmake <cross>,
                freebsd-glue [kfreebsd-any],
@@ -26,8 +24,8 @@ Build-Depends-Indep:
                dh-sequence-sphinxdoc
 Rules-Requires-Root: no
 Standards-Version: 4.6.0
-Vcs-Git: https://salsa.debian.org/cmake-team/cmake.git
-Vcs-Browser: https://salsa.debian.org/cmake-team/cmake
+Vcs-Browser: https://github.com/pkgstore/linux-deb-cmake
+Vcs-Git: https://github.com/pkgstore/linux-deb-cmake.git
 Homepage: https://cmake.org/
 
 Package: cmake

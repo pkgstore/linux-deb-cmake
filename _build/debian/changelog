@@ -1,3 +1,10 @@
+cmake (3.23.0-1001) unstable; urgency=medium
+
+  * UPD: "control" file.
+  * UPD: "debtoolchainfilegen" file.
+
+ -- Package Store <pkgstore@mail.ru>  Thu, 07 Apr 2022 11:44:00 +0300
+
 cmake (3.23.0-1000) unstable; urgency=medium
 
   * UPD: Rebuild by Package Store.
